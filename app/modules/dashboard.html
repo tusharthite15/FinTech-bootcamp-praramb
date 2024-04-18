@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- <link rel="stylesheet" href="../controllers/css/style.css -->
+    <link rel="stylesheet" href="../Controllers/CSS/dashboard.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<script src="jquery-3.2.1.min.js"></script>
+
+	<title>FinTech | Dashboard</title>
+</head>
+<style>
+	.popup-bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.8);
+		z-index: 999;
+		display: none;
+	}
+
+	.popup {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: #fff;
+		z-index: 1000;
+		width: 80%;
+		max-height: 80%;
+		overflow: auto;
+		display: none;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		padding: 20px;
+	}
+
+	.recent-deals {
+		width: 100%;
+		padding: 10px;
+		overflow-x: auto;
+	}
+
+	.transaction-table {
+		width: 100%;
+		border-collapse: collapse;
+		/* border: 1px solid #333; */
+	}
+
+	.transaction-table th {
+		background-color: #ccc;
+		color: black;
+		padding: 10px;
+		text-align: left;
+	}
+
+	.transaction-table tr {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.transaction-table tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	.transaction-table td {
+		padding: 10px;
+	}
+
+	.transaction-table tr:hover {
+		background-color: #ddd;
+	}
+</style>
+
+<body>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<!-- <a href="dashboard.html" class="brand"><i><img src="../assets/image/logos/image-removebg-preview.png"
+					alt=""></i></a> -->
+
+		<h2 style="color:black;padding:20px;font-size:35px;margin-left:10px">FinTech</h2>
+		<ul class="side-menu">
+			<li><a href="dashboard.php" class="active_home"><i class='bx bxs-dashboard icon'></i>Dashboard</a></li>
+			<li><a href="./Send_money.html"><i class="fas fa-chart-bar"></i> Send money </a></li>
+			<li><a href="./Transactions.html"><i class='bx bxs-chart icon'></i> Transactions </a></li>
+			<li><a href="./settings"><i class='bx bx-task icon'></i> Settings</a></li>
+			<!-- Add the Logout link here -->
+			<li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar'></i>
+			<form action="#" id="searchForm">
+				<div class="form-group">
+					<input type="text" placeholder="Search..." id="searchInput">
+					<i class='bx bx-search icon' id="searchIcon"></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon'></i>
+				<h2></h2>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon'></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+					alt="">
+				<ul class="profile-link">
+					<li><a href="profile.php"><i class='bx bxs-user-circle icon'></i> Profile</a></li>
+					<li><a href="./settings"><i class='bx bxs-cog'></i> Settings</a></li>
+					<li><a href="./logout.php"><i class='bx bxs-log-out-circle'></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>		
+		<!-- <h4> <?php echo $_SESSION['email']; ?> </h4> -->
+
+			<!-- <h2 style="padding-bottom :10px">Welcome, <?php echo $_SESSION['username']; ?> !!!</h2> -->
+			<h2>Welcome Tushar Thite</h2>
+			<h2 style="padding-bottom :10px; font-size:20px" class="title">Dashboard</h2>
+			<ul class="breadcrumbs">
+				<li><a href="#">Home</a></li>
+				<li class="divider">/</li>
+				<li><a href="#" class="active">Dashboard</a></li>
+				<h4>  </h4>
+
+			</ul>
+			<div class="info-data">
+				<div class="card" id="credit-card-info">
+					<div class="head">
+						<div>
+							<!-- transation amt goes here -->
+							<h2>12</h2>
+							<p>Totol transaction Amount</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="40%"></span>
+				</div>
+
+				<div class="card" id="successful-transactions">
+					<div class="head">
+						<div>
+							<h2>10</h2>
+							<p> successful transections</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+
+					</div>
+
+
+					<span class="progress" data-value="60%"></span>
+				</div>
+				<div class="card" id="failed-transactions">
+					<div class="head">
+						<div>
+							<h2>2</h2>
+							<p>Failed Transections</p>
+						</div>
+						<i class='bx bx-trending-down icon down'></i>
+					</div>
+					<span class="progress" data-value="30%"></span>
+				</div>
+				<!-- <div class="card" id="totol-transactions">
+					<div class="head">
+						<div>
+							<h2>0</h2>
+							<p>Total Transections</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div> -->
+			</div>
+			<div class="data">
+
+			<tbody>
+      <tr>
+      </tr>
+    </tbody>
+				<div class="content-data">
+					<div class="head">
+						<h3>Recent Transections</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Recent Deals Section -->
+					<div class="recent-deals">
+						<table class="transaction-table">
+							<thead>
+								<tr>
+									<th>Transaction id</th>
+									<th>Name</th>
+									<th>Date</th>
+									<th>Amount</th>
+									<th>status</th>
+									<!-- <th>Type</th> -->
+								</tr>
+							</thead>
+							<tbody id="transaction-body">
+
+								<!-- Add more rows for each transaction -->
+							
+								<!-- transaction table goes here -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="../controllers/js/script.js"></script>
+</body>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+	
+</script>
+
+
+</html>

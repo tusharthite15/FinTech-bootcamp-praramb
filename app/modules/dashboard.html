@@ -15,31 +15,6 @@
 	<title>FinTech | Dashboard</title>
 </head>
 <style>
-	.popup-bg {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.8);
-		z-index: 999;
-		display: none;
-	}
-
-	.popup {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background: #fff;
-		z-index: 1000;
-		width: 80%;
-		max-height: 80%;
-		overflow: auto;
-		display: none;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		padding: 20px;
-	}
 
 	.recent-deals {
 		width: 100%;
@@ -209,26 +184,38 @@
 						</div>
 					</div>
 					<!-- Recent Deals Section -->
-					<div class="recent-deals">
-						<table class="transaction-table">
-							<thead>
-								<tr>
-									<th>Transaction id</th>
-									<th>Name</th>
-									<th>Date</th>
-									<th>Amount</th>
-									<th>status</th>
-									<!-- <th>Type</th> -->
-								</tr>
-							</thead>
-							<tbody id="transaction-body">
+<div class="recent-deals">
+    <table class="transaction-table">
+        <thead>
+            <tr>
+                <th>Transaction id</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <!-- <th>Type</th> -->
+            </tr>
+        </thead>
+        <tbody id="transaction-body">
+            <!-- Transaction Rows -->
+            <tr>
+                <td>TN123</td>
+                <td>Soham Tamhane</td>
+                <td>2024-04-18</td>
+                <td>+ 100</td>
+                <td style="color: green;">Completed</td>
+            </tr>
+            <tr>
+                <td>TN542</td>
+                <td>Dhiraj Kadam</td>
+                <td>2024-04-17</td>
+                <td >+ ₹40</td>
+                <td style="color: red;">Failed</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-								<!-- Add more rows for each transaction -->
-							
-								<!-- transaction table goes here -->
-							</tbody>
-						</table>
-					</div>
 				</div>
 			</div>
 
@@ -238,7 +225,7 @@
 	<!-- NAVBAR -->
 
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<script src="../controllers/js/script.js"></script>
+	<script src="../Controllers/JS/Script.js"></script>
 </body>
 <script src="jquery-3.2.1.min.js"></script>
 <script>

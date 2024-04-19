@@ -47,9 +47,10 @@ li {
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
-	max-width: 250px;
+	max-width: 230px;
 	width: 100%;
-	background: var(--light);
+	/* background: var(--light); */
+	background: #F0F3FC;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -301,8 +302,10 @@ width:200px;
 }
 /* NAVBAR */
 nav {
-	background: var(--light);
-	height: 50px;
+	/* background: var(--light); */
+	/* height: 50px;
+	 */
+	 margin-top: 20px;
 	padding: 0 20px;
 	position: relative;
 	display: flex;
@@ -328,7 +331,7 @@ nav .form-group {
 nav .form-group input {
 	width: 100%;
 	background: var(--grey);
-	border-radius: 5px;
+	border-radius: 30px;
 	border: none;
 	outline: none;
 	padding: 10px 36px 10px 16px;

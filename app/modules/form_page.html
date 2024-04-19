@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Controllers/CSS/dashboard.css">
+    <link rel="stylesheet" href="../Controllers/CSS/paymentDetails.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<script src="jquery-3.2.1.min.js"></script>
+
+	<title>FinTech | Dashboard</title>
+</head>
+<style>
+
+	.recent-deals {
+		width: 100%;
+		padding: 10px;
+		overflow-x: auto;
+	}
+
+	.transaction-table {
+		width: 100%;
+		border-collapse: collapse;
+		/* border: 1px solid #333; */
+	}
+
+	.transaction-table th {
+		background-color: #ccc;
+		color: black;
+		padding: 10px;
+		text-align: left;
+	}
+
+	.transaction-table tr {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.transaction-table tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	.transaction-table td {
+		padding: 10px;
+	}
+
+	.transaction-table tr:hover {
+		background-color: #ddd;
+	}
+</style>
+
+<body>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<!-- <a href="dashboard.html" class="brand"><i><img src="../assets/image/logos/image-removebg-preview.png"
+					alt=""></i></a> -->
+
+		<h2 style="color:black;padding:20px;font-size:35px;margin-left:10px">FinTech</h2>
+		<ul class="side-menu">
+			<li><a href="dashboard.php" ><i class='bx bxs-dashboard icon'></i>Dashboard</a></li>
+			<li><a href="./form_page.html"class="active_home"><i class="fas fa-chart-bar"></i> Send money </a></li>
+			<li><a href="./Transactions.html"><i class='bx bxs-chart icon'></i> Transactions </a></li>
+			<li><a href="./settings"><i class='bx bx-task icon'></i> Settings</a></li>
+			<!-- Add the Logout link here -->
+			<li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<form action="#" id="searchForm">
+				<div class="form-group">
+					<input type="text" placeholder="Search..." id="searchInput">
+					<i class='bx bx-search icon' id="searchIcon"></i>
+				</div>
+			</form>
+			<!-- <a href="#" class="nav-link">
+				<i class='bx bxs-bell icon'></i>
+				<h2></h2>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon'></i>
+				<span class="badge">8</span>
+			</a> -->
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+					alt="">
+				<ul class="profile-link">
+					<li><a href="profile.php"><i class='bx bxs-user-circle icon'></i> Profile</a></li>
+					<li><a href="./settings"><i class='bx bxs-cog'></i> Settings</a></li>
+					<li><a href="./logout.php"><i class='bx bxs-log-out-circle'></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<!-- MAIN -->
+<main>		
+    
+    <!-- Payment Form -->
+    <form id="paymentForm">
+		<h2 style="text-align: center; padding-bottom:30px;">Payment Details</h2>
+        <div class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter name" required>
+        </div>
+        <div class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"placeholder="Enter email" required>
+        </div>
+        <div class="form">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile No." required>
+        </div>
+        <div class="form">
+            <label for="amt">Amount:</label>
+            <input type="text" id="amt" name="amt" placeholder="">
+        </div>
+        <button id="PayNow" class="pay_btn">Submit & Pay</button>
+    </form>
+    <!-- End Payment Form -->
+</main>
+<!-- MAIN -->
+
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="../Controllers/JS/Script.js"></script>
+</body>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+	
+</script>
+
+
+</html>

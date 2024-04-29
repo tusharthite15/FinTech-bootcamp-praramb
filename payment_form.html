@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTech</title>
+    <link rel="stylesheet" href="./dashboard.css  ">
+</head>
+
+<body>
+    <div class="main-dash-page">
+        <div class="sidebar-div">
+            <div class="sidebar-h">FinTech</div>
+            <div class="side-nav1">
+                
+                <a href="./dashboard.html">
+                    <div class="nav-div1">
+                        <img class="nav-img1" src="./assets/images/dashboard.png" alt="">
+                        <div class="nav-text1">Dashboard</div>
+                    </div>
+                </a>
+    
+                <a href="./payment_form.html">
+                    <div class="nav-div1">
+                        <img class="nav-img1" src="./assets/images/send_money.png" alt="">
+                        <div class="nav-text1">Send Money</div>
+                    </div>
+                </a>
+                <a href="./payment_form.html">
+                    <div class="nav-div1">
+                        <img class="nav-img1" src="./assets/images/transactions.png" alt="">
+                        <div class="nav-text1">Transactions</div>
+                    </div>
+                </a>
+
+                <a href="./payment_form.html">
+                    <div class="nav-div1">
+                        <img class="nav-img1" src="./assets/images/settings.png" alt="">
+                        <div class="nav-text1">Settings</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="main-page1">
+            <div class="top-nav-div">
+                <div class="search-bar">
+                    <input placeholder="Find Transactions" type="text">
+                    <img src="./assets/images/search.png" alt="">
+                </div>
+            </div>
+
+            <div class="section-2">
+
+               <div class="paymet_form">
+                <form action="./backend/payment gateway/index.php" method="POST">
+                    <div>
+                        <label for="username">Name</label><br>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="password">Mobile No.</label><br>
+                        <input type="mobile" id="mobile" name="mobile">
+                    </div>
+                    <div>
+                        <label for="amt">Amount</label><br>
+                        <input type="amt" id="amt" name="amt">
+                    </div>
+                    <div>
+                        <button class="submit-btn"  name="save" type="submit">Continue</button>
+                    </div>
+                    <div class="text-center">Already have an Account?
+                        <a href="./login.html">Sign in</a>
+          
+                      </div>
+                </form>
+        
+               </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTech</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        padding: 5px;
+      }
+    
+    .signup-div{
+        background-color: #F0F3FC;
+        width: fit-content;
+        padding: 30px 40px;
+    }
+    
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .web-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .web-title-1{
+        text-align: center;
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+    
+    form div{
+        margin-bottom: 10px;
+    }
+    
+    .submit-btn{
+        width: 100%;
+        background-color: #0D66D0;
+        border: none;
+        padding: 6px 0px;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+<body>
+    <div class="signup-div">
+        <div class="web-title">Welcome to FinTech</div>
+        <div class="web-title-1">Sign Up</div>
+        <form action="./backend/login.php" method="POST">
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="pass">
+            </div>
+            <div>
+                <button class="submit-btn" type="submit" name="login">Continue</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

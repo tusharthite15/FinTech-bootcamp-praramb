@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTech</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-div">
+        <div class="web-title">Welcome to FinTech</div>
+        <div class="web-title-1">Sign Up</div>
+        <div class="signupForm">
+        <form action="./backend/register.php" method="POST">
+            <div>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username">
+            </div>
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="pass">
+            </div>
+            <div>
+                <label for="confirm-password">Confirm Password</label><br>
+                <input type="password" id="confirm-password" name="cpass">
+            </div>
+            <div>
+                <button class="submit-btn"  name="save" type="submit">Continue</button>
+            </div>
+            <div class="text-center">Already have an Account?
+                <a href="./login.html">Sign in</a>
+  
+              </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
